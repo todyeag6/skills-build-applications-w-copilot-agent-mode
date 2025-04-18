@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
@@ -13,26 +13,26 @@ function App() {
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">OctoFit Tracker</Link>
+            <NavLink className="navbar-brand" to="/">OctoFit Tracker</NavLink>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link className="nav-link" to="/activities">Activities</Link>
+                  <NavLink className="nav-link" to="/activities">Activities</NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/leaderboard">Leaderboard</Link>
+                  <NavLink className="nav-link" to="/leaderboard">Leaderboard</NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/teams">Teams</Link>
+                  <NavLink className="nav-link" to="/teams">Teams</NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/users">Users</Link>
+                  <NavLink className="nav-link" to="/users">Users</NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/workouts">Workouts</Link>
+                  <NavLink className="nav-link" to="/workouts">Workouts</NavLink>
                 </li>
               </ul>
             </div>
@@ -45,7 +45,7 @@ function App() {
             <Route path="/teams" element={<Teams />} />
             <Route path="/users" element={<Users />} />
             <Route path="/workouts" element={<Workouts />} />
-            <Route path="/" element={<h1>Welcome to OctoFit Tracker</h1>} />
+            <Route path="/" element={<h1 className="display-4 text-center">Welcome to OctoFit Tracker</h1>} />
           </Routes>
         </div>
       </div>
